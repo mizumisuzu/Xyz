@@ -1,6 +1,7 @@
 <template>
   <img alt="Bio logo" src="./assets/testlogo.png" width="250" height="250" />
   <HelloWorld msg="Updates Test" />
+  <pdf src="example.pdf" />
 </template>
 
 <script>
@@ -9,6 +10,9 @@ export default {
   name: "App",
   components: {
     HelloWorld: HelloWorldVue,
+  },
+  created() {
+    document.body.style.backgroundColor = "#b0bbe9";
   },
 };
 </script>
@@ -19,7 +23,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #32343e;
   margin-top: 60px;
 }
 </style>
