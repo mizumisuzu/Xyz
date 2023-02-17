@@ -1,4 +1,17 @@
 <template>
+
+<div>
+    <nav>
+      <ul>
+        <li><router-link to="/">Home</router-link></li>
+        <li><router-link to="/projects">Projects</router-link></li>
+        <li><router-link to="/blog">Blog</router-link></li>
+        <li><router-link to="/contact">Contact</router-link></li>
+      </ul>
+    </nav>
+    <router-view/>
+  </div>
+
   <div class="Bio">
     <h1>{{ msg }}</h1>
     <p>
