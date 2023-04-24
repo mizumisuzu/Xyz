@@ -1,67 +1,81 @@
 <template>
-
-<div>
-    <nav>
+  <div class="container">
+    <nav class="nav">
       <ul>
-        <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/projects">Projects</router-link></li>
-        <li><router-link to="/blog">Blog</router-link></li>
-        <li><router-link to="/contact">Contact</router-link></li>
+        <li>
+          <!-- Page routing!-->
+          <router-link to="/" class="nav-item">Home</router-link>
+        </li>
+        <li>
+          <router-link to="/projects" class="nav-item">Projects</router-link>
+        </li>
+        <li>
+          <router-link to="/blog" class="nav-item">Blog</router-link>
+        </li>
+        <li>
+          <router-link to="/contact" class="nav-item">Contact</router-link>
+        </li>
       </ul>
     </nav>
-    <router-view/>
-  </div>
-
-  <div class="Bio">
-    <h1>{{ msg }}</h1>
-    <p>
-      Hello! This is my first implentation of my website. There might be bugs
-      and strange formatting until a stable revision!
-    </p>
-    <h3>Relevant Contact Points</h3>
-    <ul>
-      <li>
-        <a href="https://github.com/mizumisuzu" target="_blank" rel="noopener"
-          >Github</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/mizu_misuzuru"
-          target="_blank"
-          rel="noopener"
-          >Twitter</a
-        >
-      </li>
-    </ul>
-    <h3>For Employers!</h3>
+    <div class="content">
+      <router-view></router-view>
+    </div>
+    <h3 style="color: #b9bbbe">Hello I am Mizu~!</h3>
+    <h4 style="color: #b9bbbe">
+      This is my first implentation of my website. There might be bugs and
+      strange formatting until a stable revision!
+    </h4>
   </div>
 </template>
 
+<!-- really silly and not well coded nav bar but it works!-->
 <script>
 export default {
   name: "HelloWorld",
-  props: {
-    msg: String,
-  },
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-  color: #32343e;
+.container {
+  display: inline;
+  flex-direction: column;
+  height: 100%;
 }
-ul {
-  list-style-type: none;
+
+.nav {
+  background-color: #272727;
+  padding: 10px;
+  margin-bottom: 20px;
+  max-width: 500px; /* added */
+  margin: 0 auto; /* added */
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
   padding: 0;
 }
-li {
+
+.nav li {
   display: inline-block;
-  margin: 0 10px;
+  margin-right: 15px;
 }
-a {
-  color: #32343e;
+
+.nav-item {
+  color: rgb(165, 139, 139);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.nav-item:hover {
+  background-color: #ddd;
+}
+
+.content {
+  flex: 1;
 }
 </style>
