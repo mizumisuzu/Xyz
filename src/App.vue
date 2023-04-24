@@ -12,7 +12,7 @@ export default {
     HelloWorld: HelloWorldVue,
   },
   created() {
-    document.body.style.backgroundColor = "#b0bbe9";
+    document.body.style.backgroundColor = "#414141";
   },
 };
 </script>
