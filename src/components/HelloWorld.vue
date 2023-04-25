@@ -17,9 +17,7 @@
         </li>
       </ul>
     </nav>
-    <div class="content">
-      <router-view></router-view>
-    </div>
+
     <h3 style="color: #b9bbbe">Hello I am Mizu~!</h3>
     <h4 style="color: #b9bbbe">
       This is my first implentation of my website. There might be bugs and
