@@ -25,8 +25,10 @@
     </h4>
     <h4 style="color: #b9bbbe">
       This is my first implentation of my website. There might be bugs and
-      strange formatting until a stable revision! Check out my About tab if you
-      want to reach me or check out my resume.
+      strange formatting until a stable revision!
+    </h4>
+     <h4 style="color: #b9bbbe"> 
+      Check out my About tab if you want to reach me or check out my resume. 
     </h4>
   </div>
 </template>
