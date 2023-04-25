@@ -13,15 +13,20 @@
           <router-link to="/blog" class="nav-item">Blog</router-link>
         </li>
         <li>
-          <router-link to="/contact" class="nav-item">Contact</router-link>
+          <router-link to="/contact" class="nav-item">About</router-link>
         </li>
       </ul>
     </nav>
 
-    <h3 style="color: #b9bbbe">Hello I am Mizu~!</h3>
+    <h3 style="color: #b9bbbe">💞Hello I am Mizu~!💞</h3>
+    <h4 style="color: #b9bbbe">
+      I do everything technology, from microcontrollers,to web development and
+      reverse engineering.
+    </h4>
     <h4 style="color: #b9bbbe">
       This is my first implentation of my website. There might be bugs and
-      strange formatting until a stable revision!
+      strange formatting until a stable revision! Check out my About tab if you
+      want to reach me or check out my resume.
     </h4>
   </div>
 </template>
