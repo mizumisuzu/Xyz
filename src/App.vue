@@ -1,18 +1,15 @@
 <template>
   <img alt="Bio logo" src="./assets/testlogo.png" width="250" height="250" />
-  <HelloWorld msg="Updates Test" />
+  <router-view></router-view>
   <pdf src="example.pdf" />
 </template>
 
 <script>
 import HelloWorldVue from "./components/HelloWorld.vue";
-import router from "./router";
+
 export default {
   name: "App",
-  router,
-  components: {
-    HelloWorld: HelloWorldVue,
-  },
+  components: {},
   created() {
     document.body.style.backgroundColor = "#414141";
   },
