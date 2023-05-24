@@ -23,7 +23,7 @@
       This is a showcase of the finished projects i have~! I am trying to do
       better about having documentation of my work.
     </h4>
-    <button @click="pickRandomString">Pick Random Name Mc Server</button>
+    <button @click="pickRandomString">Generate Random Line</button>
     <p style="color: white">{{ randomLine }}</p>
   </div>
 </template>
@@ -32,26 +32,21 @@
 export default {
   data() {
     return {
-      randomLine: "null",
+      randomLine: "",
     };
   },
   methods: {
-    async randomString() {
+    async pickRandomString() {
       try {
         const response = await fetch("./serverList.txt");
-        console.log("??");
         if (!response.ok) {
           throw new Error("Error fetching the file");
         }
         const fileContents = await response.text();
         const lines = fileContents.split("\n");
-        console.log(lines); // Check the lines array in the console
         const randomIndex = Math.floor(Math.random() * lines.length);
-        console.log(randomIndex); // Check the random index in the console
         const randomLine = lines[randomIndex];
-        console.log(randomLine); // Check the random line in the console
         this.randomLine = randomLine.trim();
-        console.log(this.randomLine); // Check if randomLine is properly assigned
       } catch (error) {
         console.error(error);
       }
