@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     async pickRandomString() {
-      const response = await fetch("/src/assets/serverList.txt");
+      const response = await fetch("/serverList.txt");
       const text = await response.text();
       const lines = text.split("\n");
       const randomIndex = Math.floor(Math.random() * lines.length);
