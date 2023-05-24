@@ -20,10 +20,36 @@
 
     <h3 style="color: #b9bbbe">🚧Currently being Developed🚧</h3>
     <h4 style="color: #b9bbbe">
-      This is a showcase of the finished projects i have~! I am trying to do better about having documentation of my work.
+      This is a showcase of the finished projects i have~! I am trying to do
+      better about having documentation of my work.
     </h4>
+    <button @click="pickRandomString">Pick Random Name Mc Server</button>
+    <p style="color: white">{{ randomString }}</p>
   </div>
 </template>
+
+<script>
+import { ref } from "vue";
+
+export default {
+  data() {
+    return {
+      randomString: "",
+      strings: [],
+    };
+  },
+  methods: {
+    async pickRandomString() {
+      const response = await fetch("/src/assets/serverList.txt");
+      const text = await response.text();
+      const lines = text.split("\n");
+      const randomIndex = Math.floor(Math.random() * lines.length);
+      this.randomString = lines[randomIndex];
+    },
+  },
+};
+</script>
+
 
 
 <style scoped>
