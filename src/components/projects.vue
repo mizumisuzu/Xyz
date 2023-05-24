@@ -38,15 +38,31 @@ export default {
   },
   methods: {
     async pickRandomString() {
-      const response = await fetch("/serverList.txt");
-      const text = await response.text();
-      const lines = text.split("\n");
-      const randomIndex = Math.floor(Math.random() * lines.length);
-      this.randomString = lines[randomIndex];
+      try {
+        const response = await fetch("serverList.txt");
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch the file");
+        }
+
+        const text = await response.text();
+        const lines = text.split("\n");
+        
+        if (lines.length === 0) {
+          throw new Error("The file is empty");
+        }
+
+        const randomIndex = Math.floor(Math.random() * lines.length);
+        this.randomString = lines[randomIndex];
+      } catch (error) {
+        console.error("Error fetching or processing the file:", error);
+        // Handle the error or display an appropriate message to the user
+      }
     },
   },
 };
 </script>
+
 
 
 
