@@ -24,7 +24,7 @@
       better about having documentation of my work.
     </h4>
     <button @click="pickRandomString">Pick Random Name Mc Server</button>
-    <p style="color: white">{{ randomString }}</p>
+    <p style="color: white">{{ randomLine }}</p>
   </div>
 </template>
 
