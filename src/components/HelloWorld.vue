@@ -188,7 +188,7 @@ export default {
 .timeline-item {
   opacity: 0;
   animation: fadeIn 3s forwards;
-  min-height: 50px;
+  min-height: 50%;
 }
 
 .timeline-item.reveal {
