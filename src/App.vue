@@ -77,7 +77,7 @@ export default defineComponent({
         width: '100px',
         height: '100px'
       },
-      chosenTime: "Last updated " + new Date(1702277220 * 1000).toLocaleDateString(),
+      chosenTime: "Last updated " + new Date(1727474070 * 1000).toLocaleDateString(),
     };
   },
   methods: {
