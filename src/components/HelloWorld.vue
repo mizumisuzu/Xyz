@@ -253,19 +253,19 @@ body, html {
 .timeline-item:nth-child(odd) .timeline-content {
   float: right;
   clear: both;
-  margin-left: 24vw; /* adjust as needed */
+  margin-left: calc(80px + 24vw); /* adjust as needed */
   transition: opacity 100s ease-in-out;
   text-align: center;
-  font-size: 0.95vw;
+  font-size:calc(5px + 0.95vw);
 }
 
 .timeline-item:nth-child(even) .timeline-content {
   float: left;
   clear: both;
-  margin-right: 20vw; /* adjust as needed */
+  margin-right: calc(90px + 20vw); /* adjust as needed */
   transition: opacity 100s ease-in-out;
   text-align: center;
-  font-size: 0.95vw;
+  font-size: calc(5px + 0.95vw);
 }
 
 .timeline-content {
